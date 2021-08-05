@@ -19,7 +19,7 @@ body {
   background-color: #008080;
   display: grid;
   grid-template-columns: 0.1fr 1fr;
-  grid-template-rows: 1fr 0.1fr;
+  grid-template-rows: 1fr 0fr;
   grid-template-areas:
     "windows98_icons container"
     "footer footer";
