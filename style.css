@@ -1,0 +1,332 @@
+@font-face {
+  font-family:"nouveaux";
+  src: url("./fonts/px_sans_nouveaux.ttf") format("truetype");
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+div:not(#footer):not(#windows98_icons):not(img) {
+  transition: all .3s linear;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  /* padding: 30px; */
+  height: 100vh;
+  background-color: #008080;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  grid-template-rows: 1fr 0.1fr;
+  grid-template-areas:
+    "windows98_icons container"
+    "footer footer";
+  position: relative;
+}
+
+.content span {
+  font-family:"nouveaux";
+}
+
+nav {
+  background: #152b69;
+  grid-area: nav;
+  margin: 0px -10px 20px -10px;
+  display: grid;
+  grid-template-columns: 2fr 0.1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "user-name close-button";
+  align-items: center;
+}
+
+#content-img {
+  width: 70%;
+  height: 70%;
+  border-top-color: #dde0dd;
+  border-left-color: #dde0dd;
+  border-style: solid;
+  border-width: 4px;
+}
+
+#user-name {
+  grid-area: user-name;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+#nav__close-button {
+  grid-area: close-button;
+}
+
+.window button {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  padding: 0;
+  margin-left: auto;
+  margin-right: 5px;
+  background-color: silver;
+  border-top-color: #dde0dd;
+  border-left-color: #dde0dd;
+  border-width: 2px;
+}
+
+
+.icon_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.window {
+  height: 93%;
+  border: solid;
+  border-top-color: #dde0dd;
+  border-left-color: #dde0dd;
+  border-width: 2px;
+  box-shadow: rgba(3, 67, 68, 0.8) 20px 20px;
+  margin-top: 30px;
+  margin-right: 25px;
+}
+
+.container {
+  grid-area: container;
+  background-color: #c0c0c0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 4fr;
+  grid-template-areas:
+    "nav"
+    "content_container";
+  height: 100%;
+  padding: 0 10px 10px 10px;
+
+}
+
+.content_container {
+  /* background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
+  background-size: 7.5px 7.5px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px; */
+  background: repeating-conic-gradient(#a09f9f 0% 25%, transparent 0% 50%)
+              50% / 8px 8px;
+  grid-area: content_container;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.7fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "content1 content1 content2"
+    "content3 content4  content4";
+  grid-gap: 2.5rem;
+  text-align: center;
+  padding: 10px 30px 25px 30px;
+  height: 100%;
+  border: solid;
+  border-top-color: #dde0dd;
+  border-left-color: #dde0dd;
+  border-width: 2px;
+}
+
+.content {
+  background: #ffffff;
+  border-top-color: #dde0dd;
+  border-left-color: #dde0dd;
+  border-style: solid;
+  border-width: 4px;
+  box-shadow: rgb(150, 155, 155) 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content1 {
+  grid-area: content1;
+}
+
+#content2 {
+  grid-area: content2;
+}
+
+#content3 {
+  grid-area: content3;
+}
+
+#content4 {
+  grid-area: content4;
+  flex-direction: column;
+}
+
+#windows98_icons {
+  grid-area: windows98_icons;
+  display: flex;
+  flex-direction: column;
+  font-family: nouveaux;
+  font-size: 7px;
+  color: white;
+}
+
+#windows98_icons img {
+  padding-top: 20px;
+  width: 35px;
+}
+#footer {
+  grid-area: footer;
+  width:100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #c0c0c0;
+  height: 20%;
+  min-height: 27px;
+  display: flex;
+  align-items: center;
+}
+
+#footer img {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#start_button {
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 26px;
+  background-color: #c0c0c0;
+  font-family: nouveaux;
+  font-size: 9px;
+  font-weight: bolder;
+  border-top-color: #dde0dd;
+  border-left-color: #dde0dd;
+}
+
+@media only screen and (max-width: 1150px) and (min-width: 600px)  {
+  body {
+    display: grid;
+    height: 100vh;
+    min-width: 0;
+    min-height: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "container";
+  }
+
+  #footer {
+    opacity: 0;
+    /* visibility: hidden; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  #windows98_icons {
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* visibility: hidden; */
+  }
+
+  .container {
+    transition: all .5s linear;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.02fr 1fr;
+    grid-template-areas:
+      "nav "
+      "content_container";
+  }
+
+  .content_container {
+    grid-area: content_container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.2fr 1.2fr 1.2fr;
+    grid-gap: 1rem;
+    min-width: 0;
+    min-height: 0;
+    grid-template-areas:
+      "content1 content1"
+      "content2 content3"
+      "content4 content4";
+    height: 100%;
+  }
+
+  .content {
+    box-shadow: rgb(150, 155, 155) 10px 10px;
+  }
+
+  .window {
+    height: 92%;
+    margin: 10px 30px 30px 30px;
+  }
+}
+
+@media only screen and (max-width: 600px)  {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    min-width: 0;
+    min-height: 0;
+    grid-template-areas:
+      "container";
+  }
+
+  #footer {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+  }
+
+  #windows98_icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.02fr 1fr;
+    grid-template-areas:
+      "nav "
+      "content_container";
+  }
+
+  .content_container {
+    grid-area: content_container;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 1.2fr 1.2fr 1.2fr;
+    grid-gap: 1rem;
+    min-width: 0;
+    min-height: 0;
+    grid-template-areas:
+      "content1"
+      "content2"
+      "content3"
+      "content4";
+    height: 100%;
+  }
+
+  .content {
+
+    box-shadow: rgb(150, 155, 155) 10px 10px;
+  }
+
+  .window {
+    height: 92%;
+    margin: 10px 10px 10px 10px;
+  }
+}
