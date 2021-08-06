@@ -62,6 +62,16 @@ nav {
   grid-area: close-button;
 }
 
+#truth {
+  opacity: 0;
+}
+
+#truth:hover {
+  opacity: 1;
+  transition: 3s;
+}
+
+
 .window button {
   height: 20px;
   width: 20px;
